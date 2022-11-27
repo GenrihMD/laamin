@@ -26,6 +26,13 @@ class MenuItem extends HTMLElement {
         shadowRoot.appendChild(template.cloneNode(true));
     }
 
+    connectedCallback() {
+        const href = this.getAttribute('to')
+        if (href) {
+            this.addEventListener('click', () => location.href = href )
+        }
+    }
+
 }
 
 customElements.define('menu-item', MenuItem)
