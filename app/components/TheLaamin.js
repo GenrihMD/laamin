@@ -1,7 +1,11 @@
 import { t } from "../lib/html.js"
 
 const template = t`
-    <main>
+    <main
+        style="
+            display: flex;
+            justify-content: center"
+    >
         <canvas 
             id="laamin-canvas" 
             width="800px" 
