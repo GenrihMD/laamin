@@ -59,7 +59,20 @@
 <body>
 
 <top-menu>
-    <menu-item>Home</menu-item>
+    <menu-item type="menu">
+        Home
+        <menu-item
+                slot="submenu"
+                type="link"
+                href="http://google.com/"
+        >La</menu-item>
+
+        <menu-item
+                slot="submenu"
+                type="action"
+                action="laamin:re"
+        >Min</menu-item>
+    </menu-item>
     <menu-item>Docs</menu-item>
     <menu-item>About</menu-item>
     <menu-item>GitHub</menu-item>
