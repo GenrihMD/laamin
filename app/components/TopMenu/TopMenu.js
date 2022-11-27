@@ -1,9 +1,21 @@
 import { t } from "../../lib/html.js"
 
 const template = t`
-    <nav>
-        <slot></slot>
-    </nav>
+    <style>
+        .top-menu {
+            margin: 10px 10px;
+        }
+        nav {
+            justify-content: space-evenly;
+            display: flex;
+        }
+    </style>
+    
+    <div class="top-menu">
+        <nav>
+            <slot></slot>
+        </nav>
+    </div>
 `
 
 class TopMenu extends HTMLElement {
