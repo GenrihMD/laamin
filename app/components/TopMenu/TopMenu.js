@@ -1,6 +1,4 @@
-import { t } from "../../lib/html.js"
-
-const template = t`
+const template = `
     <style>
         .top-menu {
             margin: 10px 10px;
@@ -20,11 +18,11 @@ const template = t`
 
 class TopMenu extends HTMLElement {
 
-    constructor(props) {
+    constructor() {
         super();
 
         const shadowRoot = this.attachShadow({ mode: "open" });
-        shadowRoot.appendChild(template.cloneNode(true));
+        shadowRoot.innerHTML = template
     }
 
 }
