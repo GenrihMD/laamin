@@ -63,19 +63,23 @@
         Home
         <menu-item
                 slot="submenu"
-                type="link"
-                href="http://google.com/"
+                type="action"
+                action="laamin:clear"
         >La</menu-item>
 
         <menu-item
                 slot="submenu"
                 type="action"
-                action="laamin:re"
-        >Min</menu-item>
+                action="laamin:draw"
+        >min</menu-item>
     </menu-item>
     <menu-item>Docs</menu-item>
     <menu-item>About</menu-item>
-    <menu-item>GitHub</menu-item>
+    <menu-item
+            type="link"
+            href="https://github.com/GenrihMD"
+            target="_blank"
+    >GitHub</menu-item>
 </top-menu>
 
 <the-laamin></the-laamin>

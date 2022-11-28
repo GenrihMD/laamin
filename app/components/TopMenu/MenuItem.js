@@ -43,7 +43,14 @@ class MenuItem extends HTMLElement {
             case 'link':
                 const href = this.getAttribute('href')
                 if (href) {
-                    this.addEventListener('click', () => location.href = href )
+                    const target = this.getAttribute('target')
+                    this.addEventListener('click', () => {
+                        if ('_blank' == target) {
+                            window.open(href)
+                        } else {
+                            location.href = href
+                        }
+                    })
                 }
                 break
 
@@ -68,7 +75,6 @@ class MenuItem extends HTMLElement {
                 break
         }
     }
-
 }
 
 customElements.define('menu-item', MenuItem)
