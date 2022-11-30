@@ -31,7 +31,7 @@ class MenuItem extends HTMLElement {
     constructor(props) {
         super();
 
-        const shadowRoot = this.attachShadow({ mode: "closed" })
+        const shadowRoot = this.attachShadow({ mode: "open" })
         shadowRoot.innerHTML = template
         this.style.position = 'relative'
     }
