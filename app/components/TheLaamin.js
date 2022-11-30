@@ -17,7 +17,7 @@ class TheLaamin extends HTMLElement {
     constructor() {
         super();
 
-        const shadowRoot = this.attachShadow({ mode: "open" });
+        const shadowRoot = this.attachShadow({ mode: "closed" });
         shadowRoot.innerHTML = template
     }
 
